@@ -1,0 +1,11 @@
+table {
+    border: solid;
+    border-style: dashed;
+}
+
+th, td {
+    border: solid;
+    border-style: dashed;
+    text-align: center;
+    padding: 8px;
+}

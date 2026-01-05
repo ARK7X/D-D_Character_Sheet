@@ -1,0 +1,180 @@
+.characterInfoContainer {
+    display: flex;
+    flex-wrap:nowrap;
+}
+
+.characterNameContainer {
+    margin: 50px 50px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.characterNameContainer input{
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+    user-select: none;
+}
+
+.characterNameContainer input:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.infoContainer {
+    margin: 0px 0px 0px 0px;
+}
+
+.class_level_backgorund_playerContainer {
+    margin-bottom: 13px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.class_levelContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: start;
+}
+
+.classContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.classContainer .Classes {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+    user-select: none;
+}
+.classContainer .Classes:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.levelContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.levelContainer select {
+    width: 215px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+}
+
+.levelContainer select:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.backgroundContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.backgroundContainer select {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+}
+
+.backgroundContainer select:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.playerNameContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.playerNameContainer input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+}
+
+.playerNameContainer input:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.species_alignment_experienceContainer {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.speciesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.speciesContainer select {
+    width: 188px;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+}
+
+.speciesContainer select:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.alignmentContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.alignmentContainer select {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+}
+
+.alignmentContainer select:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.experienceContainer {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-items: start;
+}
+
+.experienceContainer input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+    background: transparent;
+}
+
+.experienceContainer input:focus {
+    outline: none;
+    border-bottom:  1px solid rgba(0, 0, 0, 1);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.5);
+}
