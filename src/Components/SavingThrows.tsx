@@ -7,7 +7,7 @@ export const SavingThrows = () => {
     const {Attribute, SavingAttribute, changeChecked} = useCharacterContext();
 
   return (
-    <div>
+    <div className="SavingThrowsContainer">
       {Object.entries(Attribute).map(([attribute]) => {
         return (
           <div key={attribute + " Container"}>

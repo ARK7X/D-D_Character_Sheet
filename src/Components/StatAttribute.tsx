@@ -4,7 +4,7 @@ import { Stat } from "./Stat";
 export const StatAttribute = () => {
   const { Attribute, updateAttributes } = useCharacterContext();
   return (
-    <div>
+    <div className="AttributesContainer">
       {Object.entries(Attribute).map(([attribute, objAttribute]) => (
         <Stat key={attribute} attributeName={attribute} value={objAttribute.value} bonus={objAttribute.bonus} updateAttributes={updateAttributes}/>
       ))}

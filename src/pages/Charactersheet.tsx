@@ -9,7 +9,9 @@ export const CharacterSheet = () => {
         <div className="item1"><CharacterInfo/></div>
         <div className="item3">
           <StatAttribute/>
-          <SavingThrows/>
+          <div className="SecondColumn">
+            <SavingThrows/>
+          </div>
         </div>
         <div className="item4">4</div>
         <div className="item5">5</div>

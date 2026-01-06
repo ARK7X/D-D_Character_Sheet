@@ -26,7 +26,24 @@
 .item3 {
     grid-row: 3 / span 8;
     place-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: start;
 }
+
+.item3 .AttributesContainer p {
+    margin: 0;
+    padding: 0;
+}
+
+.item3 .SecondColumn .SavingThrowsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+}
+
 .item4 {
     grid-row: 3 / span 3;
 }
