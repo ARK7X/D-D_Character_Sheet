@@ -42,3 +42,18 @@
 .item7 {
     grid-row: 6 / span 3;
 }
+
+.ValueButtons {
+    min-width: 0;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+
+.ValueButtons button {
+    width: 25px;
+    height: 25px;
+}

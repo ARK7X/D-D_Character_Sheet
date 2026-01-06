@@ -1,6 +1,6 @@
 import { CharacterInfo } from "../Components/CharacterInfo"
 import { SavingThrows } from "../Components/SavingThrows"
-import { Stats } from "../Components/Stats"
+import { StatAttribute } from "../Components/StatAttribute"
 import "../styles/characterSheet.css"
 
 export const CharacterSheet = () => {
@@ -8,7 +8,7 @@ export const CharacterSheet = () => {
     <div className="container">
         <div className="item1"><CharacterInfo/></div>
         <div className="item3">
-          <Stats/>
+          <StatAttribute/>
           <SavingThrows/>
         </div>
         <div className="item4">4</div>
