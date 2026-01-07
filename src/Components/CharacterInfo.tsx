@@ -9,7 +9,7 @@ import { alignmentData } from "../mocks/alignmentMock";
 import "../styles/characterInfo.css";
 import { GenericLabel } from "./GenericLabel";
 import { levelData, type levelType } from "../mocks/levelMock";
-import { useAttributes } from "../hooks/useAttributes";
+import { useCharacterContext } from "../hooks/useCharacterContext";
 
 export const CharacterInfo = () => {
   const classes: dataType[] = ClassMock;
@@ -18,7 +18,7 @@ export const CharacterInfo = () => {
   const alignment: dataType[] = alignmentData;
   const levels: levelType[] = levelData;
 
-  const { handleLevel } = useAttributes();
+  const { handleLevel } = useCharacterContext();
 
   return (
     <div className="characterInfoContainer">

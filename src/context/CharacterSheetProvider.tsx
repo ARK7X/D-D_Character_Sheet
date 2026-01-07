@@ -1,4 +1,4 @@
-import { useState, type JSX } from "react";
+import { useEffect, useState, type JSX } from "react";
 import type { InitialStateType } from "../interfaces/attributesInterface";
 import { attributeRules } from "../helpers/AttributeRules";
 import { CharacterSheetContext } from "./CharacterSheetContext";
@@ -82,14 +82,6 @@ export const CharacterSheetProvider = ({ children }: props) => {
       }
 
       const nextChecked = !isCurrentlyChecked;
-
-      setAttribute((prev) => ({
-          ...prev,
-          [attributeName]: {
-            ...prev[attributeName as keyof typeof prev],
-            proficiency: nextChecked ? attributeRules.getProficiencyByLevel(Level): 0
-          },
-      }));
      
 
       return {
@@ -103,6 +95,22 @@ export const CharacterSheetProvider = ({ children }: props) => {
   const handleLevel = (e: React.ChangeEvent<HTMLSelectElement>): void => {
     setLevel((prev) => (prev = Number(e.target.value)));
   };
+
+  useEffect(() => {
+    setAttribute((prev) => {
+      const updated = {...prev};
+      Object.keys(updated).forEach((attribute) => {
+        const isProficiency = SavingAttribute[attribute as keyof typeof SavingAttribute];
+        updated[attribute as keyof typeof updated] = {
+          ...updated[attribute as keyof typeof updated],
+          proficiency: isProficiency ? attributeRules.getProficiencyByLevel(Level) : 0,
+        };
+      });
+      return updated
+    });
+
+  }, [Level, SavingAttribute]);
+  
 
   return (
     <CharacterSheetContext.Provider

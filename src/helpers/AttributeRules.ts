@@ -58,7 +58,7 @@ const isAttributeValid = (attribute:number, newValue:number): boolean => {
 }
 
 const getProficiencyByLevel = (level:number): number => {
-    return proficiencyByLevel[level + 1];
+    return proficiencyByLevel[level];
 }
 
 export const attributeRules = {
