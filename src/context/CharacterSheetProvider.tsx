@@ -72,28 +72,32 @@ export const CharacterSheetProvider = ({ children }: props) => {
     }
   };
 
-  const changeChecked = (atrr: string): void => {
+  const changeChecked = (attributeName: string): void => {
     setSavingAttribute((prev) => {
       const selectedCheckbox = Object.values(prev).filter((v) => v).length;
-      if (
-        !prev[atrr as keyof typeof SavingAttribute] &&
-        selectedCheckbox >= 2
-      ) {
+      const isCurrentlyChecked = prev[attributeName as keyof typeof SavingAttribute];
+
+      if (!prev[attributeName as keyof typeof SavingAttribute] && selectedCheckbox >= 2) {
         return prev;
-      } else {
-        setAttribute((prev) => ({
+      }
+
+      const nextChecked = !isCurrentlyChecked;
+
+      setAttribute((prev) => ({
           ...prev,
-          [atrr]: {
-            ...prev[atrr as keyof typeof prev],
-            proficiency: attributeRules.getProficiencyByLevel(Level),
+          [attributeName]: {
+            ...prev[attributeName as keyof typeof prev],
+            proficiency: nextChecked ? attributeRules.getProficiencyByLevel(Level): 0
           },
-        }));
-        return {
+      }));
+     
+
+      return {
           ...prev,
-          [atrr]: !prev[atrr as keyof typeof SavingAttribute],
+          [attributeName]: nextChecked,
         };
       }
-    });
+    );
   };
 
   const handleLevel = (e: React.ChangeEvent<HTMLSelectElement>): void => {

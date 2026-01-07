@@ -27,8 +27,8 @@ export type ProviderType = {
     Attribute: Attributes,
     Level: number,
     SavingAttribute: savingAttribute,
-    updateAttributes: (atributeName:string, newValue:number, prevValue:number) => void,
-    changeChecked: (atrr:string) => void,
+    updateAttributes: (attributeName:string, newValue:number, prevValue:number) => void,
+    changeChecked: (attributeName:string) => void,
     handleLevel: (e: React.ChangeEvent<HTMLSelectElement>) => void
 }
 
