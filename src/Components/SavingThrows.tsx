@@ -24,11 +24,8 @@ export const SavingThrows = () => {
             <GenericLabel
               key={attribute + "label"}
               forName={attribute}
-              labelText={`${
-                Attribute[attribute as keyof typeof Attribute].bonus
-              } ${
-                Attribute[attribute as keyof typeof Attribute].proficiency
-              } ${attribute}`}
+              labelText={`${Attribute[attribute as keyof typeof Attribute].bonus + Attribute[attribute as keyof typeof Attribute].proficiency}`}
+              isSavingThrows={true}
             />
           </div>
         );
